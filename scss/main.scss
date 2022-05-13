@@ -1,0 +1,195 @@
+@import "variables";
+
+@mixin titulos {
+    padding: 2.5rem;
+    margin: 0.5rem 0;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+button {
+    font-family: 'Bitter', serif;
+}
+
+// títulos
+.main-title {
+    @include titulos();
+}
+
+// Navbar
+.nav-link:hover {
+    transform: scale(1.05);
+}
+
+
+// Index/Presentaciones
+
+#presentaciones {
+    background: $color1;
+    background: linear-gradient(0deg, $color7 0%, $color5 57%);
+    background-repeat: repeat-x;
+    background-size: 75%;
+
+    .card-border {
+        border: solid 10px $color1;
+        border-radius: 20px;
+        overflow: hidden;
+        transition: all ease-out 0.2s;
+    }
+
+    .card-border:hover {
+        transform: scale(1.05);
+    }
+}
+
+// Pages/nosotros --> Imágenes
+
+.imgquienes {
+    width: 600px;
+    padding: 2rem 4rem;
+    border: 1px;
+    border-style: groove ridge;
+}
+
+.contenido1 {
+    width: 600px;
+    line-height: 2rem;
+    padding: 2rem 4rem;
+    margin: 1rem;
+    text-align: justify;
+    border: 1px;
+    border-style: groove ridge;
+}
+
+// Pages/nosotros --> Ubicación
+
+#ubicacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .contenido2 {
+        line-height: 1.5rem;
+        text-align: center;
+        border: 1px;
+        border-style: groove ridge;
+        margin: 2rem;
+        padding: 2rem;
+    }
+
+    iframe {
+        width: 80%;
+        padding: 1rem;
+        margin: auto;
+    }
+
+}
+
+// Estilos
+
+.cream {
+    background: linear-gradient(0deg, $color5 0%, $color1 57%);
+}
+
+.ipa {
+    background: linear-gradient(0deg, $color4 0%, $color1 57%);
+}
+
+.scottish {
+    background: linear-gradient(0deg, $color3 0%, $color1 57%);
+}
+
+.milk {
+    background: linear-gradient(0deg, $color2 0%, $color1 57%);
+}
+
+.belgian {
+    background: linear-gradient(0deg, $color6 0%, $color1 57%);
+}
+
+.weisse {
+    background: linear-gradient(0deg, $color8 0%, $color1 57%);
+}
+
+.premuim {
+    background: linear-gradient(0deg, $color2 0%, $color1 57%);
+}
+
+// Nosotros media
+
+.media {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.media1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .flex-item {
+        width: 600px;
+        border: 1px;
+        padding: 1.5rem;
+        margin: 50px;
+        border-style: groove ridge;
+    }
+
+    .parrafo {
+        line-height: 2rem;
+        text-align: justify;
+        border: 0;
+        border-style: none;
+    }
+}
+
+.color {
+    background-color: rgb(163, 158, 142);
+    border-radius: 20%;
+    padding: 0.5rem;
+}
+
+@media screen and (max-width: 576px) {
+    .tam-img {
+        width: 450px;
+    }
+
+    .media {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    .alinear-texto {
+        text-align: center;
+    }
+
+    .media1 {
+        flex-direction: column;
+        justify-content: center;
+        .flex-item {
+            width: 280px;
+            justify-content: center;
+        }
+    }
+}
